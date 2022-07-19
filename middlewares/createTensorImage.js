@@ -38,7 +38,6 @@ const createTensorImage = async (req, res, next) => {
 
     function ffmpegSync() {
       return new Promise((resolve, reject) => {
-        console.log('creating tensorImage...');
         ffmpeg({
           source: path.resolve(__dirname, '../images/video.mp4'),
         })
@@ -46,27 +45,24 @@ const createTensorImage = async (req, res, next) => {
             req.images = filenames;
           })
           .on('end', () => {
-            console.log('finished');
             resolve();
           })
-          .on('error', (err) => {
-            console.log(err);
-          })
+          .on('error', (err) => {})
           .takeScreenshots(
             {
               filename: 'tensorImage.jpg',
               timemarks: [
                 '40%',
+                '41%',
                 '42%',
+                '43%',
                 '44%',
+                '45%',
                 '46%',
+                '47%',
                 '48%',
+                '49%',
                 '50%',
-                '52%',
-                '54%',
-                '56%',
-                '58%',
-                '60%',
               ],
             },
             path.resolve(__dirname, '../images')

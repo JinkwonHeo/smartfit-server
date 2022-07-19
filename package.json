@@ -6,8 +6,12 @@
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www"
   },
+  "engines": {
+    "node": "14.16.0"
+  },
   "dependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@ffmpeg-installer/linux-x64": "^4.1.0",
     "@ffprobe-installer/ffprobe": "^1.4.1",
     "@google-cloud/storage": "^6.2.2",
     "@tensorflow-models/posenet": "^2.2.2",
@@ -20,11 +24,11 @@
     "express": "~4.16.1",
     "ffmpeg": "0.0.4",
     "ffmpeg-probe": "^1.0.6",
-    "firebase-admin": "^11.0.0",
     "fluent-ffmpeg": "^2.1.2",
     "http-errors": "~1.6.3"
   },
   "devDependencies": {
+    "node-pre-gyp": "^0.17.0",
     "nodemon": "^2.0.19"
   }
 }

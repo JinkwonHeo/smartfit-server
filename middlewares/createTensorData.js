@@ -10,7 +10,6 @@ const createTensorData = async (req, res, next) => {
   const tensorImageArray = req.images;
   const tensorData = [];
 
-  console.log('analyze start...');
   try {
     const tryModel = () => {
       return new Promise(async (resolve, reject) => {
@@ -46,7 +45,6 @@ const createTensorData = async (req, res, next) => {
 
     await tryModel();
 
-    console.log('analyze end!');
     req.posenetData = tensorData;
     next();
   } catch (error) {

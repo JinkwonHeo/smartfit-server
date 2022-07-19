@@ -1,9 +1,11 @@
-const { createVideoData } = require('../../services/tensorflow.services');
-
 exports.analyzeVideo = (req, res, next) => {
   try {
-    createVideoData(req.body, req.posenetData);
-    res.json('success');
+    res.json({
+      title: req.body.fileName,
+      url: req.body.url,
+      thumbnail: req.body.thumbnail,
+      poseData: req.posenetData,
+    });
   } catch (error) {
     next(error);
   }
