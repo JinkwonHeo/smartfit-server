@@ -1,7 +1,5 @@
 # SmartFit
 
-![prescription](./readme-assets/smartfit.png)
-
 <code>#홈트레이닝</code>
 <code>#자세교정</code>
 <code>#Tensorflow</code>
